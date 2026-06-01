@@ -1,5 +1,4 @@
-import logo from "@/assets/gb-logo-transparent.png.asset.json";
-import mockup from "@/assets/gb-mockup.png.asset.json";
+import mockup from "@/assets/gb-mockup-nobg.png";
 import { Shield, Monitor, Settings2, KeyRound } from "lucide-react";
 
 const badges = [
@@ -50,8 +49,7 @@ export function Hero() {
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-brand opacity-30 blur-3xl rounded-full" />
           <div className="relative flex justify-center">
-            <img src={mockup.url} alt="GB Browser no smartphone" className="relative max-h-[640px] w-auto drop-shadow-[0_30px_60px_rgba(0,80,200,0.45)]" />
-            <img src={logo.url} alt="" className="absolute -top-6 -left-6 w-28 h-28 opacity-90 glow-cyan animate-pulse" style={{ animationDuration: "3s" }} />
+            <img src={mockup} alt="GB Browser no smartphone" className="relative max-h-[640px] w-auto object-contain drop-shadow-[0_30px_60px_rgba(0,80,200,0.45)]" />
           </div>
         </div>
       </div>
