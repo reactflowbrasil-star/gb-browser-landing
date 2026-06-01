@@ -77,7 +77,8 @@ export function Pricing() {
                 </ul>
                 <a
                   href={p.href}
-                  target={p.href.startsWith("http") ? "_blank" : undefined}
+                  download={p.href.endsWith(".apk") ? "" : undefined}
+                  target={p.href.startsWith("http") && !p.href.endsWith(".apk") ? "_blank" : undefined}
                   rel={p.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   className={`block text-center py-3 rounded-xl font-semibold transition ${
                     p.featured
