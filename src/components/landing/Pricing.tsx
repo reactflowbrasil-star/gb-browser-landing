@@ -9,7 +9,7 @@ const plans = [
     desc: "Experimente todos os recursos por 10 minutos.",
     features: ["Acesso por 10 minutos", "Todos os recursos liberados", "Suporte via FAQ"],
     cta: "Começar teste",
-    href: "http://growmoneydigital.com.br/gb/gbbrowser.apk",
+    href: "https://growmoneydigital.com.br/gb/gbbrowser.apk",
     featured: false,
   },
   {

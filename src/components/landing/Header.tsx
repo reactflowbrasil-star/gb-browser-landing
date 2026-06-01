@@ -39,7 +39,7 @@ export function Header() {
         </nav>
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="http://growmoneydigital.com.br/gb/gbbrowser.apk"
+            href="https://growmoneydigital.com.br/gb/gbbrowser.apk"
             download
             target="_top"
             rel="noopener noreferrer"
