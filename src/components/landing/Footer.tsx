@@ -1,4 +1,4 @@
-import logo from "@/assets/gb-logo.png.asset.json";
+import logo from "@/assets/gb-logo-transparent.png.asset.json";
 
 export function Footer() {
   return (

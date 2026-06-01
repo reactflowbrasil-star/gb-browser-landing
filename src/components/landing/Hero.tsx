@@ -1,4 +1,4 @@
-import logo from "@/assets/gb-logo.png.asset.json";
+import logo from "@/assets/gb-logo-transparent.png.asset.json";
 import mockup from "@/assets/gb-mockup.png.asset.json";
 import { Shield, Monitor, Settings2, KeyRound } from "lucide-react";
 
