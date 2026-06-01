@@ -1,11 +1,11 @@
-import logo from "@/assets/gb-logo.png.asset.json";
+import logo from "@/assets/gb-logo-transparent.png.asset.json";
 
 export function Footer() {
   return (
     <footer className="border-t border-border py-12 mt-12">
       <div className="mx-auto max-w-7xl px-5 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="flex items-center gap-2.5">
-          <img src={logo.url} alt="GB Browser" className="h-8 w-8 rounded-lg" />
+        <div className="flex items-center gap-3">
+          <img src={logo.url} alt="GB Browser" className="h-10 w-10" />
           <span className="font-display font-semibold">GB Browser</span>
         </div>
         <nav className="flex flex-wrap gap-6 text-sm text-muted-foreground">

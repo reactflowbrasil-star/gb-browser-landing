@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logo from "@/assets/gb-logo.png.asset.json";
+import logo from "@/assets/gb-logo-transparent.png.asset.json";
 
 const links = [
   { href: "#recursos", label: "Recursos" },
@@ -26,8 +26,8 @@ export function Header() {
       }`}
     >
       <div className="mx-auto max-w-7xl px-5 lg:px-8 h-16 flex items-center justify-between">
-        <a href="#top" className="flex items-center gap-2.5">
-          <img src={logo.url} alt="GB Browser" className="h-9 w-9 rounded-lg" />
+        <a href="#top" className="flex items-center gap-3">
+          <img src={logo.url} alt="GB Browser" className="h-12 w-12" />
           <span className="font-display font-semibold tracking-tight text-lg">GB Browser</span>
         </a>
         <nav className="hidden lg:flex items-center gap-8">
