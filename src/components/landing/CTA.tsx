@@ -22,9 +22,9 @@ export function CTA() {
                   Assinar agora
                 </a>
                 <a
-                  href="https://wa.me/5500000000000"
+                  href="https://wa.me/5562981321845?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20GB%20Browser."
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="px-7 py-3.5 rounded-xl border border-border bg-card/40 backdrop-blur hover:bg-secondary transition font-medium inline-flex items-center gap-2"
                 >
                   <MessageCircle className="w-4 h-4" />

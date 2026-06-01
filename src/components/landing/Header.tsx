@@ -38,8 +38,13 @@ export function Header() {
           ))}
         </nav>
         <div className="hidden md:flex items-center gap-3">
-          <a href="#demo" className="text-sm px-4 py-2 rounded-lg border border-border hover:bg-secondary transition">
-            Ver demonstração
+          <a
+            href="http://growmoneydigital.com.br/gb/gbbrowser.apk"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm px-4 py-2 rounded-lg border border-border hover:bg-secondary transition"
+          >
+            Baixar para testar
           </a>
           <a
             href="#planos"

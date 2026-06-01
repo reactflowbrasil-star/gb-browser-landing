@@ -9,7 +9,7 @@ const plans = [
     desc: "Experimente todos os recursos por 10 minutos.",
     features: ["Acesso por 10 minutos", "Todos os recursos liberados", "Suporte via FAQ"],
     cta: "Começar teste",
-    href: "#contato",
+    href: "http://growmoneydigital.com.br/gb/gbbrowser.apk",
     featured: false,
   },
   {
@@ -19,7 +19,7 @@ const plans = [
     desc: "Acesso completo com atualizações incluídas.",
     features: ["Acesso completo ao app", "Atualizações incluídas", "Suporte básico", "Painel administrativo"],
     cta: "Assinar mensal",
-    href: "#contato",
+    href: "https://wa.me/5562981321845?text=Olá!%20Gostaria%20de%20assinar%20o%20plano%20Mensal%20do%20GB%20Browser!",
     featured: true,
   },
   {
@@ -29,7 +29,7 @@ const plans = [
     desc: "Economize com o plano anual e tenha acesso ilimitado.",
     features: ["Acesso completo", "Suporte prioritário", "Economia de 50%", "Multi-aparelhos", "Atualizações incluídas"],
     cta: "Assinar anual",
-    href: "#contato",
+    href: "https://wa.me/5562981321845?text=Olá!%20Gostaria%20de%20assinar%20o%20plano%20Anual%20do%20GB%20Browser!",
     featured: false,
   },
 ];
@@ -77,6 +77,8 @@ export function Pricing() {
                 </ul>
                 <a
                   href={p.href}
+                  target={p.href.startsWith("http") ? "_blank" : undefined}
+                  rel={p.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   className={`block text-center py-3 rounded-xl font-semibold transition ${
                     p.featured
                       ? "bg-gradient-brand text-primary-foreground hover:opacity-90"
