@@ -41,7 +41,7 @@ export function Header() {
           <a
             href="http://growmoneydigital.com.br/gb/gbbrowser.apk"
             download
-            target="_blank"
+            target="_top"
             rel="noopener noreferrer"
             className="text-sm px-4 py-2 rounded-lg border border-border hover:bg-secondary transition"
           >
