@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import { Reveal } from "./Reveal";
 
@@ -18,18 +19,27 @@ export function CTA() {
                 Tenha um navegador Android completo, privado e preparado para uso profissional.
               </p>
               <div className="flex flex-wrap justify-center gap-3">
-                <a href="#planos" className="px-7 py-3.5 rounded-xl bg-gradient-brand text-primary-foreground font-semibold hover:opacity-90 transition glow-primary">
+                <motion.a
+                  href="#planos"
+                  className="px-7 py-3.5 rounded-xl bg-gradient-brand text-primary-foreground font-semibold glow-primary"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                >
                   Assinar agora
-                </a>
-                <a
+                </motion.a>
+                <motion.a
                   href="https://wa.me/5562981321845?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20GB%20Browser."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-7 py-3.5 rounded-xl border border-border bg-card/40 backdrop-blur hover:bg-secondary transition font-medium inline-flex items-center gap-2"
+                  className="px-7 py-3.5 rounded-xl border border-border bg-card/40 backdrop-blur font-medium inline-flex items-center gap-2"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
                   <MessageCircle className="w-4 h-4" />
                   Falar com suporte
-                </a>
+                </motion.a>
               </div>
             </div>
           </div>

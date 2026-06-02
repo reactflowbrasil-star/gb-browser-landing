@@ -40,8 +40,7 @@ export function Header() {
         <div className="hidden md:flex items-center gap-3">
           <a
             href="https://growmoneydigital.com.br/gb/gbbrowser.apk"
-            download
-            target="_top"
+            target="_blank"
             rel="noopener noreferrer"
             className="text-sm px-4 py-2 rounded-lg border border-border hover:bg-secondary transition"
           >

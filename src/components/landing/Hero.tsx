@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import mockup from "@/assets/gb-mockup-nobg.png";
 import { Shield, Monitor, Settings2, KeyRound } from "lucide-react";
 
@@ -29,12 +30,24 @@ export function Hero() {
             sites personalizados, notificações e licença integrada — tudo gerenciado por um painel próprio.
           </p>
           <div className="flex flex-wrap gap-3 mb-6">
-            <a href="#planos" className="focus-ring px-6 py-3.5 rounded-xl bg-gradient-brand text-primary-foreground font-semibold hover:opacity-90 transition glow-primary">
+            <motion.a
+              href="#planos"
+              className="focus-ring px-6 py-3.5 rounded-xl bg-gradient-brand text-primary-foreground font-semibold glow-primary"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            >
               Assinar agora
-            </a>
-            <a href="#recursos" className="focus-ring px-6 py-3.5 rounded-xl border border-border bg-card/40 backdrop-blur hover:bg-secondary transition font-medium">
+            </motion.a>
+            <motion.a
+              href="#recursos"
+              className="focus-ring px-6 py-3.5 rounded-xl border border-border bg-card/40 backdrop-blur font-medium"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            >
               Conhecer recursos
-            </a>
+            </motion.a>
           </div>
           <div className="flex items-center gap-4 mb-10 text-xs text-muted-foreground">
             <div className="flex -space-x-2">
@@ -42,7 +55,9 @@ export function Hero() {
               <span className="w-7 h-7 rounded-full bg-cyan border-2 border-background" />
               <span className="w-7 h-7 rounded-full bg-mint border-2 border-background" />
             </div>
-            <span><strong className="text-foreground">+5.000</strong> usuários ativos · ★ 4,9/5</span>
+            <span>
+              <strong className="text-foreground">+5.000</strong> usuários ativos · ★ 4,9/5
+            </span>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {badges.map((b) => (
