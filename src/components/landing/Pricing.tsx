@@ -11,6 +11,8 @@ const plans = [
     cta: "Começar teste",
     href: "https://growmoneydigital.com.br/gb/gbbrowser.apk",
     featured: false,
+    badge: null,
+    note: null,
   },
   {
     name: "Mensal",
@@ -20,23 +22,27 @@ const plans = [
     features: ["Acesso completo ao app", "Atualizações incluídas", "Suporte básico", "Painel administrativo"],
     cta: "Assinar mensal",
     href: "https://wa.me/5562981321845?text=Olá!%20Gostaria%20de%20assinar%20o%20plano%20Mensal%20do%20GB%20Browser!",
-    featured: true,
+    featured: false,
+    badge: null,
+    note: null,
   },
   {
     name: "Anual",
     price: "R$ 299,90",
     period: "/ano",
     desc: "Economize com o plano anual e tenha acesso ilimitado.",
-    features: ["Acesso completo", "Suporte prioritário", "Economia de 50%", "Multi-aparelhos", "Atualizações incluídas"],
+    features: ["Acesso completo", "Suporte prioritário", "Economia de R$ 298,90/ano", "Multi-aparelhos", "Atualizações incluídas"],
     cta: "Assinar anual",
     href: "https://wa.me/5562981321845?text=Olá!%20Gostaria%20de%20assinar%20o%20plano%20Anual%20do%20GB%20Browser!",
-    featured: false,
+    featured: true,
+    badge: "Melhor custo-benefício",
+    note: "equivalente a R$ 24,99/mês",
   },
 ];
 
 export function Pricing() {
   return (
-    <section id="planos" className="py-24 relative">
+    <section id="planos" className="py-16 lg:py-24 relative">
       <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-96 bg-gradient-radial opacity-50" />
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         <Reveal className="text-center mb-16 max-w-2xl mx-auto">
@@ -50,15 +56,15 @@ export function Pricing() {
           {plans.map((p, i) => (
             <Reveal key={p.name} delay={i * 80}>
               <div
-                className={`relative rounded-2xl p-7 h-full flex flex-col ${
+                className={`relative rounded-2xl p-7 h-full flex flex-col hover-lift ${
                   p.featured
                     ? "bg-gradient-to-b from-primary/15 to-card border-2 border-primary/50 glow-primary"
                     : "card-surface"
                 }`}
               >
-                {p.featured && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-gradient-brand text-primary-foreground text-xs font-semibold">
-                    Mais escolhido
+                {p.badge && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-gradient-brand text-primary-foreground text-xs font-semibold whitespace-nowrap">
+                    {p.badge}
                   </div>
                 )}
                 <h3 className="font-display text-xl font-semibold mb-1">{p.name}</h3>
@@ -66,6 +72,7 @@ export function Pricing() {
                 <div className="mb-6">
                   <span className="text-4xl font-display font-bold">{p.price}</span>
                   <span className="text-muted-foreground text-sm ml-1">{p.period}</span>
+                  {p.note && <div className="text-xs text-cyan mt-1">{p.note}</div>}
                 </div>
                 <ul className="space-y-3 mb-8 flex-1">
                   {p.features.map((f) => (

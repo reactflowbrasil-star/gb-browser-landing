@@ -19,7 +19,7 @@ const items = [
 
 export function Benefits() {
   return (
-    <section id="recursos" className="py-24 relative">
+    <section id="recursos" className="py-16 lg:py-24 relative">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <Reveal className="text-center mb-16 max-w-2xl mx-auto">
           <p className="text-xs uppercase tracking-[0.2em] text-cyan mb-3">Recursos principais</p>
@@ -31,7 +31,7 @@ export function Benefits() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
           {items.map((it, i) => (
             <Reveal key={it.title} delay={i * 40}>
-              <div className="card-surface rounded-2xl p-5 h-full hover:border-primary/40 transition-all hover:-translate-y-1 group">
+              <div className="card-surface hover-lift rounded-2xl p-5 h-full group">
                 <div className="w-11 h-11 rounded-xl bg-gradient-brand/10 border border-border flex items-center justify-center mb-4 group-hover:glow-cyan transition">
                   <it.icon className="w-5 h-5 text-cyan" />
                 </div>
