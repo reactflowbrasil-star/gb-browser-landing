@@ -27,7 +27,7 @@ export function Header() {
     >
       <div className="mx-auto max-w-7xl px-5 lg:px-8 h-16 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-3">
-          <img src={logo.url} alt="GB Browser" className="h-12 w-12" />
+          <img src={logo.url} alt="GB Browser" className="h-10 w-10 lg:h-12 lg:w-12" />
           <span className="font-display font-semibold tracking-tight text-lg">GB Browser</span>
         </a>
         <nav className="hidden lg:flex items-center gap-8">
@@ -56,8 +56,9 @@ export function Header() {
         </div>
         <button
           aria-label="Menu"
+          aria-expanded={open}
           onClick={() => setOpen(!open)}
-          className="md:hidden p-2 rounded-lg border border-border"
+          className="focus-ring md:hidden p-2 rounded-lg border border-border"
         >
           <span className="block w-5 h-0.5 bg-foreground mb-1" />
           <span className="block w-5 h-0.5 bg-foreground mb-1" />

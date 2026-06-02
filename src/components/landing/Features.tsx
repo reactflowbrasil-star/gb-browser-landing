@@ -31,7 +31,7 @@ const blocks = [
 
 export function Features() {
   return (
-    <section className="py-24">
+    <section className="py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <Reveal className="text-center mb-14 max-w-2xl mx-auto">
           <p className="text-xs uppercase tracking-[0.2em] text-cyan mb-3">Funcionalidades</p>
@@ -42,7 +42,7 @@ export function Features() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {blocks.map((b, i) => (
             <Reveal key={b.title} delay={i * 60}>
-              <div className="card-surface rounded-2xl p-6 h-full">
+              <div className="card-surface hover-lift rounded-2xl p-6 h-full">
                 <div className="flex items-center gap-3 mb-5">
                   <div className="w-10 h-10 rounded-lg bg-gradient-brand/20 border border-border flex items-center justify-center">
                     <b.icon className="w-5 h-5 text-cyan" />
